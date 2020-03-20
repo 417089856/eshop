@@ -18,10 +18,6 @@ public class RabbitMqProducer {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
-    /**
-     * 发送订单请求到队列order-queue
-     * @param orderDTO
-     */
     public void send(OrderDTO orderDTO) {
         amqpTemplate.convertAndSend(OrderConst.ORDER_QUEUE, orderDTO);
     }
