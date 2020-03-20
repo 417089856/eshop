@@ -1,11 +1,10 @@
 package com.yzxie.study.eshopbiz.queue;
 
+import com.yzxie.study.eshopcommon.constant.OrderConst;
 import com.yzxie.study.eshopcommon.dto.OrderDTO;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import static com.yzxie.study.eshopcommon.constant.OrderConst.ORDER_QUEUE;
 
 /**
  * Author: xieyizun
@@ -24,6 +23,6 @@ public class RabbitMqProducer {
      * @param orderDTO
      */
     public void send(OrderDTO orderDTO) {
-        amqpTemplate.convertAndSend(ORDER_QUEUE, orderDTO);
+        amqpTemplate.convertAndSend(OrderConst.ORDER_QUEUE, orderDTO);
     }
 }

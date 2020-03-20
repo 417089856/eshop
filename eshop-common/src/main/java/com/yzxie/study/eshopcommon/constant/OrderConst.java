@@ -10,4 +10,8 @@ public class OrderConst {
 
     public static final String ORDER_QUEUE = "order-queue";
 
+    public static final String EXCHANGE_A = "my-mq-exchange_A";
+
+
+
 }

@@ -24,7 +24,7 @@ public class TestSecKill {
     @Test
     public void testSeckill() {
         final CountDownLatch startUpLatch = new CountDownLatch(1);
-        int concurrentLevel = 100;
+        int concurrentLevel = 50;
         final CountDownLatch concurrentLatch = new CountDownLatch(concurrentLevel);
 
         final JSONObject params = new JSONObject();
